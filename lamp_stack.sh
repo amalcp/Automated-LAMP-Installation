@@ -23,8 +23,9 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password tempp@55'
 sudo apt-get -y install mysql-server
 
+#Adding the php info page
 sudo printf "<?php\nphpinfo();\n?>" > /var/www/html/info.php;
-#Restart all the installed services to verify that everything is installed properly
+#Restart all the installed services
 
 echo -e "\n"
 
